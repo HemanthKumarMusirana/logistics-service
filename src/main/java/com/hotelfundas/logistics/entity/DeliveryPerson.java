@@ -11,7 +11,7 @@ import lombok.Data;
 public class DeliveryPerson {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long Id;
     private String name;
     private boolean isactive;
     private String area;
