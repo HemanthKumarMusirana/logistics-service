@@ -30,4 +30,9 @@ public class OrderDeliveryController {
     public OrderDelivery getOrderDeliveryById(@PathVariable Long id) {
         return orderDeliveryService.getOrderDeliveryById(id);
     }
+
+    @GetMapping("/status/{orderId}")
+    public String getOrderStatus(@PathVariable Long orderId) {
+        return orderDeliveryService.getOrderStatus(orderId);
+    }
 }

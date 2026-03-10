@@ -54,4 +54,13 @@ public class OrderDeliveryService {
                 .orElseThrow(() -> new RuntimeException("Order delivery not found"));
     }
 
+    public String getOrderStatus(Long orderId) {
+
+        OrderDelivery delivery = orderDeliveryRepository
+                .findByOrderId(orderId)
+                .orElseThrow(() -> new RuntimeException("Order not found"));
+
+        return delivery.getDeliveryStatus();
+    }
+
 }
